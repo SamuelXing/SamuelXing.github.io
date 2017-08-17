@@ -21,7 +21,7 @@ This blog is contructed by Jekyll and deployed on Github pages. The theme is dev
 1. Download this [repo](https://github.com/SamuelXing/SamuelXing.github.io).
 
 2. Setup local envrionment. (On Mac)
-	- Ruby: I'm using v2.1.4. You can use [RVM](https://rvm.io/) to manage the different ruby versions on your local machine. You can see more details about how to use rvm for this project in <a href="<a href="README.md#Appendix">Appendix</a> section
+	- Ruby: I'm using v2.1.4. You can use [RVM](https://rvm.io/) to manage the different ruby versions on your local machine. You can see more details about how to use rvm for this project in <a href="README.md#Appendix">Appendix</a> section
 	
 	- Jekyll: v3.5.1. `sudo gem install jekyll`
 	
