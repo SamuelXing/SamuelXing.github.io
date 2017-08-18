@@ -21,6 +21,8 @@ layout: page
 	<li>Grunt - Gulp - Yeoman</li>
 	<li>Git</li>
 	<li>MySQL - MongoDB</li>
+	<li>Machine Learning</li>
+	<li>Docker</li>
 </ul>
 
 <h2>Projects</h2>
