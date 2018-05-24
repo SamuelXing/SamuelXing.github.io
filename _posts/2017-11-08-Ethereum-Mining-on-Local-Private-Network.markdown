@@ -6,9 +6,6 @@ description: A guide to setup an Ethereum private network.
 comments: true
 ---
 
-Ethereum Mining on Local Private Network
-===
-
 Ethereum Introduction
 ---
 
