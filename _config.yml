@@ -1,110 +1,115 @@
-# main text of home
-name: Samuel Xing 
-bio: Coding, rock, sk8, life
-
-# summary info
-description: A blog about technology and stuff related.
-
-# if it's an external image, update below for true
-# better with square images
-external-image: false
-picture: assets/images/profile.jpeg
-
-# If you want to include your resume, set to true
-# and specify source (external or local).
-resume: true
-resume-external: true
-resume-url: https://google.com/?q=my+resume
-
-url: https://samuelxing.github.io
-# your url: http://USERNAME.github.io
-
-permalink: /:title/
-
-# To enable google analytics, supply your token below
-# analytics-google: 'UA-MYANALYTICS'
-
-# To enable piwik tracking, supply your url & site ID below
-# analytics-piwik-url: 'piwik.my-host.com'
-# analytics-piwik-id: 1
-
-# if you don't want comments in your posts, leave categories empty
-disqus:
-  shortname: zixing33 # enter this from your disqus account
-  categories: [blog, project] # only show disqus for posts that have these categories
-
-# if you don't have any of social below, comment the line
-facebook: samuel.xing.3
-twitter: samuel_xzh3
-# google: mygoogle
-instagram: zxing33
-# pinterest: mypinterest
-linkedin: samuel-xing-207b6ab8
-# youtube: myyoutube
-# spotify: myspotify
-github: SamuelXing
-# lastfm: mylastfm
-# stackoverflow: 7044681/mystackoverflow
-# quora: userquora
-# reddit: username
-#medium: medium
-# vimeo: myvimeo
-# lanyrd: mylanyrd
+# -----------------------------------------------------------------------------
+# Site settings
+# -----------------------------------------------------------------------------
+title: Zihao Xing 
 email: sam1796896099@gmail.com
+description: > # this means to ignore newlines until "url:"
+  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+footer_text: >
+  Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
+  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
 
-authors:
-    johndoe:
-        name: John Doe
-        bio: A Man who travels the world eating noodles
-        external-image: false
-        picture: assets/images/profile.jpg
-        twitter: johndoe
-    jamesfoster:
-        name: James Foster
-        bio: A Man who develops software with coffee
-        external-image: false
-        picture: assets/images/james.jpg
-        twitter: jamesfoster
+url:  # the base hostname & protocol for your site
+baseurl: # the subpath of your site, e.g. /blog/
+last_updated: # leave blank if you don't want to display last updated
 
-# do you want a larger site? change the option below
-# options: [normal, large] | default: normal
-# normal = 560px / large = 810px
-width: normal
+# -----------------------------------------------------------------------------
+# Social integration
+# -----------------------------------------------------------------------------
+github_username: SamuelXing # your GitHub user name
+twitter_username: # your Twitter handle
+linkedin_username: zihao-xing-207b6ab8 # your LinkedIn user name
+scholar_userid: # your Google Scholar ID
+orcid_id: # your ORCID ID
+contact_note: >
+  You can find me on GitHub as SamuelXing.
+google_analytics: # out your google-analytics code
 
-# if you don't need pagination, comment the *paginate* configs below
-# paginate: 5
-# paginate_path: "blog/:num/"
+# -----------------------------------------------------------------------------
+# Blog
+# -----------------------------------------------------------------------------
+blog_name: Blog 
+blog_description: My technical blog.
 
-# if you don't need projects, comment the *projects* configs below
-projects: true
+# Pagination
+paginate: 4
+permalink: /blog/:year/:title/
+paginate_path: /blog/page:num/
 
-# if you don't need "about" or "blog", comment them out below
-about: true
-blog: true
+text:
+  pagination:
+    newer: 'Newer'
+    older: 'Older'
 
-# do you want to show the "read time" of the posts?
-read-time: true
+# Comments
+disqus_shortname: zixing33 # put your disqus shortname
 
-# do you want to show the "tags" inside the posts?
-show-tags: true
+# Optional features
+show_social_icons:  false
+enable_anchorjs:    false
+enable_katex:       true
 
-# related posts inside a post?
-related: true
+# -----------------------------------------------------------------------------
+# Collections
+# -----------------------------------------------------------------------------
+collections:
+  news:
+    defaults:
+      layout: post
+    output: true
+    permalink: /news/:path/
+  projects:
+    output: true
+    permalink: /projects/:path/
 
-# Display links for next and previous posts for the specified categories
-post-advance-links: [blog]
+news_limit: 5
 
-# show author block at the end of a post ?
-show-author: false
+# -----------------------------------------------------------------------------
+# Jekyll settings
+# -----------------------------------------------------------------------------
 
-# do you want some animations?
-animation: true
+# Build settings
+markdown: kramdown
+highlighter: pygments
 
-gems:
-  - jekyll-seo-tag
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
+# Includes
+include: ['_pages']
 
-jekyll-mentions:
-    base_url: https://github.com
+# Plug-ins
+plugins:
+    - jekyll-email-protect
+    - jekyll-paginate
+    - jekyll/scholar
+    - jemoji
+
+# Jekyll-Scholar
+scholar:
+
+  last_name: Einstein
+
+  style: apa
+  locale: en
+
+  sort_by: year
+  order: descending
+
+  source: /_bibliography/
+  bibliography: papers.bib
+  bibliography_template: bib
+
+  replace_strings: true
+  join_strings: true
+
+  details_dir: bibliography
+  details_layout: bibtex.html
+  details_link: Details
+
+  query: "@*"
+
+# -----------------------------------------------------------------------------
+# Other settings
+# -----------------------------------------------------------------------------
+jquery_version: "1.12.4"
+katex_version: "0.9.0"
+anchorjs_version: "3.2.2"

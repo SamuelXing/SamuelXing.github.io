@@ -1,72 +1,103 @@
-<p align="center">
-    <h2 align="center">This is my offical blog- <a href="http://zixing33.cc">Website</a> </h2>
-</p>
+# al-folio
 
-<p align="center">
-This blog is contructed by Jekyll and deployed on Github pages. The theme is developed by Sérgio Kopplin. Thanks Kopplin. If you are interested in constructing your own blog by using these tech stacks, you can follow the instructions as bellow to do so. The following steps are exactly how I build this blog. Enjoy.
-</p>
+[![demo](https://img.shields.io/badge/theme-demo-brightgreen.svg)](https://alshedivat.github.io/al-folio/)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/alshedivat/al-folio/blob/master/LICENSE)
+[![gitter](https://badges.gitter.im/alshedivat/al-folio.svg)](https://gitter.im/alshedivat/al-folio?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
+A simple and clean [Jekyll](https://jekyllrb.com/) theme for academics.
 
+[![Screenshot](assets/img/full-screenshot.png)](https://alshedivat.github.io/al-folio/)
 
+Originally, **al-folio** was based on the [\*folio theme](https://github.com/bogoli/-folio) (published by [Lia Bogoev](http://liabogoev.com) and under the MIT license).
+Since then, it got a full re-write of the styles and many additional cool features.
+The emphasis is on whitespace, transparency, and academic usage: [theme demo](https://alshedivat.github.io/al-folio/).
 
-## What has inside
+## Getting started
 
-- [Jekyll](https://jekyllrb.com/), [Sass](http://sass-lang.com/) ~[RSCSS](http://rscss.io/)~ and [SVG](https://www.w3.org/Graphics/SVG/)
-- Tests with [Travis](https://travis-ci.org/)
-- Google Speed: [98/100](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fsergiokopplin.github.io%2Findigo%2F);
-- No JS. :sunglasses:
+For more about how to use Jekyll, check out [this tutorial](https://www.taniarascia.com/make-a-static-website-with-jekyll/).
+Why Jekyll? Read this [blog post](https://karpathy.github.io/2014/07/01/switching-to-jekyll/)!
 
-## Setup
+### Installation
 
-1. Download this [repo](https://github.com/SamuelXing/SamuelXing.github.io).
+Assuming you have [Ruby](https://www.ruby-lang.org/en/downloads/) and [Bundler](https://bundler.io/) installed on your system (*hint: for ease of managing ruby gems, consider using [rbenv](https://github.com/rbenv/rbenv)*), first fork the theme from `github.com:alshedivat/al-folio` to `github.com:<your-username>/<your-repo-name>` and do the following:
 
-2. Setup local envrionment. (On Mac)
-	- Ruby: I'm using v2.1.4. You can use [RVM](https://rvm.io/) to manage the different ruby versions on your local machine. You can see more details about how to use rvm for this project in <a href="README.md#Appendix">Appendix</a> section
-	
-	- Jekyll: v3.5.1. `sudo gem install jekyll`
-	
-	- Install [NodeJS](https://nodejs.org/) and [Bundler](http://bundler.io/).
-	
-	- Open terminal. Enter the project's home directory.
-	
-	- Install dependencies for this project. Using `bundle install`. If there have permisson issues, intuitively try `sudo`.
-	
-	-  Then run `bundle exec jekyll serve --config _config.yml,_config-dev.yml`
- 
-	- Open it in your browser: `http://localhost:4000`
-	
-	- Test your app with `bundle exec htmlproofer ./_site`
-
-3. Github pages.
-	- Create a new repo.
-	
-	- Clone this repo to you local machine.
-	
-	- Move the contents of the blog to that repo folder.
-	
-	- Then run: `git add .`, `git commot -m "first commit"`, `git push origin master`. By now, if everything is fine, then typing `Your-Username.github.io` on you browser, you are able to see the blog.
-
-4. Domain name.
-5. Disqus configurations.
-	
-
-## Settings
-
-You must fill some informations on `_config.yml` to customize your site.
-
-```
-name: John Doe
-bio: 'A Man who travels the world eating noodles'
-picture: 'assets/images/profile.jpg'
-...
-
-and lot of other options, like width, projects, pages, read-time, tags, related posts, animations, multiple-authors, etc.
+```bash
+$ git clone git@github.com:<your-username>/<your-repo-name>.git
+$ cd <your-repo-name>
+$ bundle install
+$ bundle exec jekyll serve
 ```
 
-## How To?
+Now, feel free to customize the theme however you like (don't forget to change the name!).
+After you are done, **commit** your final changes.
+Now, you can deploy your website to [GitHub Pages](https://pages.github.com/) by running the deploy script:
 
-Check the [FAQ](./FAQ.md) if you have any doubt or problem.
+```bash
+$ ./bin/deploy [--user]
+```
+By default, the script uses the `master` branch for the source code and deploys the webpage to `gh-pages`.
+The optional flag `--user` tells it to deploy to `master` and use `source` for the source code instead.
+Using `master` for deployment is a convention for [user and organization pages](https://help.github.com/articles/user-organization-and-project-pages/).
 
----
+**Note:** when deploying your user or organization page, make the `_config.yml` has `url` and `baseurl` fields as follows.
 
-[MIT](http://kopplin.mit-license.org/) License © Sérgio Kopplin
+```
+url: # should be empty
+baseurl:  # should be empty
+```
+
+## Features
+
+#### Ergonomic Publications
+
+Your publications page is generated automatically from your BibTex bibliography.
+Simply edit `_bibliography/papers.bib`.
+You can also add new `*.bib` files and customize the look of your publications however you like by editing `_pages/publications.md`.
+
+Keep meta-information about your co-authors in `_data/coauthors.yml` and Jekyll will insert links to their webpages automatically.
+
+#### Collections
+This Jekyll theme implements collections to let you break up your work into categories.
+The example is divided into news and projects, but easily revamp this into apps, short stories, courses, or whatever your creative work is.
+
+> To do this, edit the collections in the `_config.yml` file, create a corresponding folder, and create a landing page for your collection, similar to `_pages/projects.md`.
+
+Two different layouts are included: the blog layout, for a list of detailed descriptive list of entries, and the projects layout.
+The projects layout overlays a descriptive hoverover on a background image.
+If no image is provided, the square is auto-filled with the chosen theme color.
+Thumbnail sizing is not necessary, as the grid crops images perfectly.
+
+#### Theming
+Six beautiful theme colors have been selected to choose from.
+The default is purple, but quickly change it by editing `$theme-color` variable in the `_sass/variables.scss` file (line 72).
+Other color variables are listed there, as well.
+
+#### Photos
+Photo formatting is made simple using rows of a 3-column system.
+Make photos 1/3, 2/3, or full width.
+Easily create beautiful grids within your blog posts and projects pages:
+
+<p align="center">
+  <a href="https://alshedivat.github.io/al-folio/projects/1_project/">
+    <img src="assets/img/photos-screenshot.png" width="75%">
+  </a>
+</p>
+
+#### Code Highlighting
+This theme implements Jekyll's built in code syntax highlighting with Pygments.
+Just use the liquid tags `{% highlight python %}` and `{% endhighlight %}` to delineate your code:
+
+<p align="center">
+  <a href="https://alshedivat.github.io/al-folio/blog/2015/code/">
+    <img src="assets/img/code-screenshot.png" width="75%">
+  </a>
+</p>
+
+## Contributing
+
+Feel free to contribute new features and theme improvements by sending a pull request.
+Style improvements and bug fixes are especially welcome.
+
+## License
+
+MIT
