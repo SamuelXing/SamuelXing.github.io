@@ -15,9 +15,9 @@ news: false
 social: true
 ---
 
-<p>Hi there, I'm Zihao(Samuel), currently a Master student majored in Computer Science. :-) </p>
+<p>Hi there, I'm Zihao(Samuel).:-) </p>
 
-<p>My interests are mainly about <strong>Blockchain</strong>, <strong>WEB</strong> development.</p>
+<p>My interests are <strong>Blockchain</strong>, <strong>WEB</strong> development.</p>
 
 <h4><strong>Skills & Interests</strong></h4>
 
