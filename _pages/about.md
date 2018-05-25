@@ -2,14 +2,11 @@
 layout: about
 permalink: /
 title: <strong>Zihao</strong> Xing
-description: 121 Newbury Hollow Lane, Syracuse, NY, 13210
+description: Coding, Rock&Roll, Skateboarding, Life.
 
 profile:
   align: right
   image: prof_pic.jpg
-  address: >
-    <p>Coding, Rock&Roll, Skateboarding, Life.</p>
-
 
 news: false 
 social: true
@@ -17,7 +14,7 @@ social: true
 
 <p>Hi there, I'm Zihao(Samuel).:-) </p>
 
-<p>My interests are <strong>Blockchain</strong>, <strong>WEB</strong> development.</p>
+<p>My interests are <strong>WEB</strong>, <strong>Blockchain</strong> development.</p>
 
 <h4><strong>Skills & Interests</strong></h4>
 
